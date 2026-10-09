@@ -1,4 +1,4 @@
-const CACHE = 'trenirovki-v7';
+const CACHE = 'trenirovki-v21';
 const FILES = ['./', 'index.html', 'manifest.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
@@ -27,6 +27,6 @@ self.addEventListener('fetch', e => {
         return r;
       })
       .catch(() => caches.match(e.request, { ignoreSearch: true })
-        .then(m => m || caches.match('index.html')))
+        .then(m => m || (e.request.mode === 'navigate' ? caches.match('index.html') : Response.error())))
   );
 });
