@@ -1,4 +1,4 @@
-const CACHE = 'trenirovki-v21';
+const CACHE = 'trenirovki-v24';
 const FILES = ['./', 'index.html', 'manifest.json', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
