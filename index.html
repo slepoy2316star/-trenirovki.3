@@ -511,6 +511,49 @@ label.addb{cursor:pointer}
 .arow{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:12px 14px;margin-bottom:6px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 14.5px system-ui;text-align:left;cursor:pointer}
 .arow .ic{color:var(--mut);flex:0 0 auto}
 .acats{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}.acats small{opacity:.6;font-weight:600}
+
+.pv3 svg .ms3 path{stroke-linejoin:round}
+.pv3 svg .ms3 .m1{fill:#e5372b;stroke:#8f1a12;stroke-width:.7}
+.pv3 svg .ms3 .m2{fill:#ff9a76;stroke:#c25a3a;stroke-width:.6;opacity:.85}
+.pv3 svg .ms3 .bh{opacity:.42}
+.pv3 svg .ms3 .m2.bh{opacity:.3}
+.pv3 svg path.plt{opacity:.28!important}
+.pv3 svg .bd path:not(.ol),.pv3 svg g.bd>circle,.pv3 svg circle.bd{stroke:color-mix(in srgb,var(--fb) 62%,#000);stroke-width:.7}
+.pv3 svg .fr path:not(.ol),.pv3 svg g.fr>circle{stroke:color-mix(in srgb,var(--ffr) 70%,#000);stroke-width:.6}
+.pvm{display:flex;flex-direction:column;gap:5px;margin-top:10px;padding:10px 12px;border-radius:14px;background:var(--c2);font-size:13px;line-height:1.4;color:var(--mut)}
+.pvm span{display:flex;gap:7px;align-items:baseline}.pvm b{color:var(--ink);font-weight:600;flex:0 0 auto}
+.pvm i{flex:0 0 auto;width:10px;height:10px;border-radius:50%;transform:translateY(1px)}
+.pvm i.m1{background:#e5372b}.pvm i.m2{background:#ff9a76}
+
+.ex .nm::after{content:"";flex:0 0 auto;width:7px;height:7px;margin:7px 4px 0 auto;border-right:2px solid var(--mut);border-bottom:2px solid var(--mut);transform:rotate(45deg);opacity:.7;transition:transform .3s var(--ease)}
+.ex.open .nm::after{transform:rotate(225deg);margin-top:10px}
+.exh{display:flex;align-items:center;gap:10px;margin:0 0 10px;padding:10px 10px 10px 12px;border-radius:14px;border:1px dashed color-mix(in srgb,var(--c,var(--s)) 55%,var(--line));background:color-mix(in srgb,var(--c,var(--s)) 8%,var(--card));font-size:13px;line-height:1.35;color:var(--ink);animation:up .4s var(--ease) both;transition:opacity .25s,transform .25s}
+.exh.out{opacity:0;transform:translateY(-6px)}
+.exhi{flex:0 0 auto;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:color-mix(in srgb,var(--s) 18%,var(--c2));color:var(--s)}
+.exh>span:nth-child(2){flex:1}
+.exh button{flex:0 0 auto;width:28px;height:28px;border-radius:50%;border:0;background:var(--c2);color:var(--mut);display:grid;place-items:center;cursor:pointer}
+.pcard2{padding:16px;margin-bottom:12px;border-radius:22px;border:1px solid var(--line);background:var(--card);animation:up .45s var(--ease) both;box-shadow:0 10px 26px -22px rgba(0,0,0,.6)}
+.pcard2.cur{border-color:color-mix(in srgb,var(--s) 45%,var(--line));background:radial-gradient(120% 90% at 100% 0%,color-mix(in srgb,var(--s) 16%,transparent),transparent 60%),radial-gradient(90% 80% at 0% 100%,color-mix(in srgb,var(--l) 12%,transparent),transparent 60%),var(--card)}
+.pc2h{display:flex;gap:12px;align-items:flex-start}
+.pc2i{flex:0 0 auto;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--s);color:#fff;box-shadow:0 8px 18px -10px var(--s)}
+.pc2t{flex:1;min-width:0}
+.pc2e{display:block;font:700 10.5px system-ui;letter-spacing:1.5px;text-transform:uppercase;color:var(--s);margin-bottom:2px}
+.ptl{display:flex;align-items:center;gap:6px}.ptl b{font:750 18px/1.25 system-ui;letter-spacing:-.01em;color:var(--ink);min-width:0}
+.pc2t small{display:block;color:var(--mut);font-size:13px;margin-top:4px;line-height:1.4}
+.pc2d{margin:10px 0 0;color:var(--mut);font-size:13.5px;line-height:1.45}
+.pic2{flex:0 0 auto;min-width:32px;height:32px;padding:0 8px;border-radius:999px;border:1px solid var(--line);background:var(--c2);color:var(--mut);display:inline-grid;place-items:center;cursor:pointer;font:600 13px system-ui}
+.pic2.warn{color:#fff;background:var(--s);border-color:var(--s)}
+.pren{display:flex;gap:8px;align-items:center;margin:2px 0}.pren .inp{flex:1;min-width:0;padding:9px 11px}
+.pwk{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin:14px 0 4px}
+.pwd{display:flex;flex-direction:column;align-items:center;gap:5px}
+.pwd i{font:700 10.5px system-ui;font-style:normal;letter-spacing:.6px;color:var(--mut)}
+.pwd b{display:block;width:100%;height:8px;border-radius:6px;background:var(--line)}
+.pwd.ks b{background:var(--s)}.pwd.kl b,.pwd.ke b{background:var(--l)}.pwd.ke b{opacity:.6}.pwd.kr b{background:var(--line)}
+.pwd.ks i{color:var(--s)}.pwd.kl i,.pwd.ke i{color:var(--l)}
+.pc2b{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:12px}.pc2b .sp{flex:1}
+.psec{display:flex;align-items:baseline;gap:8px;margin:22px 2px 10px}.psec h3{margin:0;font:800 19px system-ui;color:var(--ink)}.psec span{font:700 12px system-ui;color:var(--mut);padding:2px 8px;border-radius:999px;background:var(--c2)}
+.ppd b{display:flex;align-items:center;gap:8px}.ppd b em{margin-left:auto;font:600 11px system-ui;font-style:normal;color:var(--mut)}
+.pdt{font:800 10.5px system-ui;letter-spacing:.6px;padding:2px 6px;border-radius:6px;background:var(--c2)}.pdt.ks{color:var(--s)}.pdt.kl,.pdt.ke{color:var(--l)}.pdt.kr{color:var(--mut)}
 </style></head><body>
 <div class="hero" id="hero"></div>
 <div class="card" id="prot"></div>
@@ -861,14 +904,7 @@ function face(dir){return d3(dir,eye)>-.15}
 var chest=a3(nk,m3(s,-13)),waist=a3(r,m3(s,20)),T=[];
 [-1,1].forEach(function(g){T.push([a3(J.H[g>0?1:0].sh,[0,0,0]),6.5],[a3(a3(chest,m3(l,g*9)),m3(f,5)),9],[a3(a3(chest,m3(l,g*9)),m3(f,-4)),9.5],[a3(waist,m3(l,g*6)),9.5],[a3(J.L[g>0?1:0].hp,m3(f,0)),9.5],[a3(a3(r,m3(l,g*6)),m3(f,-5)),9])});
 var tb=blobD(V,T),tsvg='<g class="'+(gh?"gh":"bd")+'"><path class="ol" d="'+tb+'"/><path d="'+tb+'"/></g>',tm="";
-if(mus&&!gh){
- if(mus=="ch"&&face(f))tm+=[-1,1].map(function(g){return'<path d="'+blobD(V,[[a3(a3(a3(nk,m3(s,-8)),m3(l,g*5)),m3(f,7.5)),4],[a3(a3(a3(nk,m3(s,-8)),m3(l,g*15)),m3(f,5)),4],[a3(a3(a3(nk,m3(s,-17)),m3(l,g*6)),m3(f,9)),4.5],[a3(a3(a3(nk,m3(s,-16)),m3(l,g*13)),m3(f,7)),4]])+'"/>'}).join("");
- if(mus=="ab"&&face(f))tm+='<path d="'+blobD(V,[[a3(a3(r,m3(s,10)),m3(f,7)),5],[a3(a3(r,m3(s,30)),m3(f,8)),5.5]])+'"/>';
- if(mus=="bk"&&face(m3(f,-1)))tm+=[-1,1].map(function(g){return'<path d="'+blobD(V,[[a3(a3(a3(nk,m3(s,-10)),m3(l,g*14)),m3(f,-7)),4],[a3(a3(a3(nk,m3(s,-34)),m3(l,g*7)),m3(f,-7)),4],[a3(a3(a3(nk,m3(s,-10)),m3(l,g*4)),m3(f,-9)),4]])+'"/>'}).join("");
- if(mus=="ob")tm+=[-1,1].map(function(g){if(!face(m3(l,g))&&!face(f))return"";return'<path d="'+blobD(V,[[a3(a3(r,m3(s,10)),m3(l,g*11)),4],[a3(a3(r,m3(s,30)),m3(l,g*12)),4],[a3(a3(a3(r,m3(s,22)),m3(l,g*9)),m3(f,5)),4]])+'"/>'}).join("");
- if(mus=="nk")tm+='<path d="'+blobD(V,[[a3(nk,m3(s,-2)),5],[J.H[0].sh,4],[J.H[1].sh,4],[a3(nk,m3(s,6)),4]])+'"/>';
- if(mus=="gl")tm+=[-1,1].map(function(g){if(!face(m3(f,-1))&&!face(m3(l,g)))return"";return'<path d="'+blobD(V,[[a3(a3(r,m3(l,g*6)),m3(f,-7)),6],[a3(a3(a3(r,m3(l,g*7)),m3(f,-6)),m3(s,-7)),6]])+'"/>'}).join("")}
-add(td,tsvg+(tm?'<g class="ms">'+tm+'</g>':''));
+add(td,tsvg);var LF=[],AF=[];
 /* head */
 var hv=n3([J.hd[0]-nk[0],J.hd[1]-nk[1],J.hd[2]-nk[2]]),hf=n3(a3(f,m3(hv,-d3(f,hv)))),hc=cls(V.d(J.hd));
 add(V.d(nk)+.1,'<path class="'+(gh?"gh":"bd")+'" d="'+capD(V,nk,a3(nk,m3(hv,8)),5,4.5)+'"/>');
@@ -877,21 +913,35 @@ var hp2=V.p(J.hd);add(V.d(J.hd)+.2,'<circle class="'+(gh?"gh":"bd")+' hdo" cx="'
 for(var sd=0;sd<2;sd++){var A=J.H[sd],Lg=J.L[sd],g=sd?1:-1;
  // leg
  var dl=(V.d(Lg.hp)+V.d(Lg.kn)+V.d(Lg.an))/3,lc=cls(dl),ld=capD(V,Lg.hp,Lg.kn,8.5,6)+capD(V,Lg.kn,Lg.an,6,4.2)+capD(V,Lg.an,Lg.to,4,3),lm="";
- if(mus&&!gh){var kf=n3(a3(m3(Lg.sn,-1),Lg.th));// knee front direction ~ perpendicular to thigh pointing away from shin fold
-  var qf=n3(a3(f,m3(Lg.th,-d3(f,Lg.th))));var bend=a3(Lg.sn,m3(Lg.th,-d3(Lg.sn,Lg.th)));if(Math.hypot(bend[0],bend[1],bend[2])>.25)qf=n3(m3(bend,-1));
-  if(mus=="qd"&&face(qf))lm+='<path d="'+capD(V,a3(l3(Lg.hp,Lg.kn,.15),m3(qf,4)),a3(l3(Lg.hp,Lg.kn,.85),m3(qf,3.5)),5,3.5)+'"/>';
-  if(mus=="gl"&&face(m3(qf,-1)))lm+='<path d="'+capD(V,a3(l3(Lg.hp,Lg.kn,.2),m3(qf,-4)),a3(l3(Lg.hp,Lg.kn,.85),m3(qf,-3.5)),4.5,3.2)+'"/>';
-  var cb=n3(a3(m3(n3(a3(Lg.to,m3(Lg.an,-1))),-1),m3(Lg.sn,d3(n3(a3(Lg.to,m3(Lg.an,-1))),Lg.sn))));
-  if(mus=="cf"&&face(cb))lm+='<path d="'+capD(V,a3(l3(Lg.kn,Lg.an,.1),m3(cb,3)),a3(l3(Lg.kn,Lg.an,.55),m3(cb,2.5)),4.2,2.5)+'"/>'}
- add(dl,'<g class="'+lc+'"><path class="ol" d="'+ld+'"/><path d="'+ld+'"/>'+(lm?'<g class="ms">'+lm+'</g>':'')+'</g>');
+ var qf=n3(a3(f,m3(Lg.th,-d3(f,Lg.th))));var bend=a3(Lg.sn,m3(Lg.th,-d3(Lg.sn,Lg.th)));if(Math.hypot(bend[0],bend[1],bend[2])>.25)qf=n3(m3(bend,-1));
+ var tv=n3(a3(Lg.to,m3(Lg.an,-1))),cb=n3(a3(m3(tv,-1),m3(Lg.sn,d3(tv,Lg.sn))));LF[sd]={qf:qf,cb:cb};
+ add(dl,'<g class="'+lc+'"><path class="ol" d="'+ld+'"/><path d="'+ld+'"/>'+'</g>');
  // arm
  var da=(V.d(A.sh)+V.d(A.el)+V.d(A.hn))/3+.5,ac=cls(da),ad=capD(V,A.sh,A.el,5.2,4.2)+capD(V,A.el,A.hn,4.2,3.2),hpn=V.p(A.hn),am="";
- if(mus&&!gh){var fold=a3(A.fa,m3(A.ua,-d3(A.fa,A.ua))),bf;if(Math.hypot(fold[0],fold[1],fold[2])>.25)bf=n3(fold);else{bf=n3(a3(f,m3(A.ua,-d3(f,A.ua))));if(Math.hypot(bf[0],bf[1],bf[2])<.1)bf=f}
-  if(mus=="bi"&&face(bf))am+='<path d="'+capD(V,a3(l3(A.sh,A.el,.25),m3(bf,2.6)),a3(l3(A.sh,A.el,.85),m3(bf,2.4)),3,2.4)+'"/>';
-  if(mus=="tr"&&face(m3(bf,-1)))am+='<path d="'+capD(V,a3(l3(A.sh,A.el,.2),m3(bf,-2.6)),a3(l3(A.sh,A.el,.85),m3(bf,-2.4)),3,2.4)+'"/>';
-  if(mus=="fa")am+='<path d="'+capD(V,l3(A.el,A.hn,.08),l3(A.el,A.hn,.65),3.6,2.8)+'"/>';
-  if(mus=="sh")am+='<path d="'+blobD(V,[[A.sh,5.6],[l3(A.sh,A.el,.3),4.6]])+'"/>'}
- add(da,'<g class="'+ac+'"><path class="ol" d="'+ad+'"/><path d="'+ad+'"/><circle cx="'+rf(hpn[0])+'" cy="'+rf(hpn[1])+'" r="4.3"/>'+(am?'<g class="ms">'+am+'</g>':'')+'</g>')}
+ var fold=a3(A.fa,m3(A.ua,-d3(A.fa,A.ua))),bf;if(Math.hypot(fold[0],fold[1],fold[2])>.25)bf=n3(fold);else{bf=n3(a3(f,m3(A.ua,-d3(f,A.ua))));if(Math.hypot(bf[0],bf[1],bf[2])<.1)bf=f}AF[sd]={bf:bf};
+ add(da,'<g class="'+ac+'"><path class="ol" d="'+ad+'"/><path d="'+ad+'"/><circle cx="'+rf(hpn[0])+'" cy="'+rf(hpn[1])+'" r="4.3"/>'+'</g>')}
+/* muscles overlay (x-ray): primary red, secondary light */
+if(mus&&!gh){var MU=typeof mus=="string"?{p:[mus],s:[]}:mus,out="";
+ function P3(base,ds,dl,df){return a3(a3(a3(base,m3(s,ds||0)),m3(l,dl||0)),m3(f,df||0))}
+ function shp(key){var R=[];// [path, facingDir]
+  [0,1].forEach(function(sd){var g=sd?1:-1,A=J.H[sd],Lg=J.L[sd],lf=LF[sd],af=AF[sd];
+   if(key=="ch")R.push([blobD(V,[[P3(nk,-7,g*3,8),3.6],[a3(P3(A.sh,-4,0,4),m3(l,-g*2)),4],[P3(nk,-19,g*4,9),4.4],[P3(nk,-17,g*13,7),4]]),f]);
+   if(key=="ab")[8,17,26].forEach(function(z){R.push([blobD(V,[[P3(r,z,g*3.3,8.5),3.1],[P3(r,z+5,g*3.3,8.5),3.1]]),f])});
+   if(key=="ob")R.push([blobD(V,[[P3(r,8,g*10,2),4],[P3(r,28,g*12,3),4],[P3(r,18,g*9,6),3.5]]),m3(l,g)]);
+   if(key=="bk")R.push([blobD(V,[[a3(P3(A.sh,-6,0,-3),m3(l,-g*1)),4.6],[P3(nk,-22,g*12,-6),5],[P3(r,14,g*5,-7),3.6],[P3(nk,-12,g*4,-9),4]]),m3(f,-1)]);
+   if(key=="lb")R.push([blobD(V,[[P3(r,4,g*3,-9),3],[P3(r,24,g*3,-9),3]]),m3(f,-1)]);
+   if(key=="sh")R.push([blobD(V,[[A.sh,6.2],[l3(A.sh,A.el,.3),4.8]]),null]);
+   if(key=="bi")R.push([capD(V,a3(l3(A.sh,A.el,.22),m3(af.bf,2.4)),a3(l3(A.sh,A.el,.85),m3(af.bf,2.2)),3.6,2.6),af.bf]);
+   if(key=="tr")R.push([capD(V,a3(l3(A.sh,A.el,.18),m3(af.bf,-2.4)),a3(l3(A.sh,A.el,.85),m3(af.bf,-2.2)),3.6,2.6),m3(af.bf,-1)]);
+   if(key=="fa")R.push([capD(V,l3(A.el,A.hn,.06),l3(A.el,A.hn,.62),3.9,2.8),null]);
+   if(key=="qd")R.push([capD(V,a3(l3(Lg.hp,Lg.kn,.12),m3(lf.qf,3.6)),a3(l3(Lg.hp,Lg.kn,.86),m3(lf.qf,3)),5.8,3.8),lf.qf]);
+   if(key=="hm")R.push([capD(V,a3(l3(Lg.hp,Lg.kn,.2),m3(lf.qf,-3.6)),a3(l3(Lg.hp,Lg.kn,.88),m3(lf.qf,-3)),5,3.4),m3(lf.qf,-1)]);
+   if(key=="gl")R.push([blobD(V,[[P3(r,-1,g*6.5,-7),6.6],[P3(r,-8,g*7,-6),6]]),m3(f,-1)]);
+   if(key=="cf")R.push([capD(V,a3(l3(Lg.kn,Lg.an,.08),m3(lf.cb,3)),a3(l3(Lg.kn,Lg.an,.58),m3(lf.cb,2.2)),4.6,2.6),lf.cb]);
+   if(key=="nk"&&sd==0)R.push([blobD(V,[[a3(nk,m3(s,5)),4],[a3(J.H[0].sh,m3(f,-2)),3.8],[a3(J.H[1].sh,m3(f,-2)),3.8],[P3(nk,-11,0,-7),4.2]]),null]);
+  });return R}
+ function emit(keys,cl){keys.forEach(function(k){shp(k).forEach(function(q){var vis=!q[1]||d3(q[1],eye)>-.2;out+='<path class="'+cl+(vis?'':' bh')+'" d="'+q[0]+'"/>'})})}
+ emit(MU.s||[],"m2");emit(MU.p||[],"m1");if(out)add(5e3,'<g class="ms3">'+out+'</g>')}
 /* held equipment */
 var ho=gh?"":o.hold;
 if(ho=="db"||ho=="db1"){for(var k=ho=="db1"?1:0;k<2;k++){var A2=J.H[k],ga=n3(side3(p.g||o.g,k,l)||l),c=A2.hn;
@@ -914,9 +964,15 @@ function eq3(E,vn){var V=V3[vn],o=[];(E.eq||[]).forEach(function(q){var svg="",d
  if(q.t=="pad"){svg='<path class="eqb" d="'+capD(V,q.a,q.b,q.r||5,q.r||5)+'"/>';d=(V.d(q.a)+V.d(q.b))/2}
  if(q.t=="ball"){var p=V.p(q.c);svg='<circle class="eqb" cx="'+rf(p[0])+'" cy="'+rf(p[1])+'" r="'+q.R+'"/>';d=V.d(q.c)}
  if(svg)o.push([d+(q.z||0),svg])});return o}
+
+var MKW=[["hm",/бицепс\s*бедр|задн[а-яё]*\s*поверхн|подколен/],["bi",/бицепс|двуглав/],["tr",/трицепс/],["ch",/грудн/],["bk",/широчайш|кругл|ромбовид|верх[а-яё]* спин|середин[а-яё]* трапец|нижн[а-яё]* трапец/],["lb",/поясниц|разгибател[а-яё]* спин|выпрямител/],["nk",/верх[а-яё]* трапец|^трапец|, трапец|трапеции$|шея|шеи|шейн/],["sh",/дельт|плечи(\s|,|$)/],["fa",/предплеч|кист|хват/],["qd",/квадрицепс|передн[а-яё]* поверхн[а-яё]* бедр/],["gl",/ягодиц|ягодичн/],["cf",/икр|камбаловид/],["ab",/пресс|прям[а-яё]* мышц[а-яё]* живот|кор(\s|,|$)/],["ob",/кос/]];
+function mkeys(t){t=String(t||"").toLowerCase();var o=[],u=t;MKW.forEach(function(m){if(m[1].test(u)){o.push(m[0]);if(m[0]=="hm")u=u.replace(/бицепс\s*бедр[а-яё]*/g,"")}});return o}
+var MUC={};
+function musOf(id,grp){var k=id+"|"+grp;if(MUC[k])return MUC[k];var q=typeof MX!="undefined"&&MX[id],p=q?mkeys(q.mp):[],s2=q?mkeys(q.ms):[];
+ if(!p.length&&MG3[grp])p=[MG3[grp]];if(MG3[grp]=="gl"&&p.indexOf("gl")<0&&p.indexOf("hm")<0)p.push("gl");if(grp=="Мобильность"||grp=="Кардио")p=p.filter(function(x){return x!="sh"});s2=s2.filter(function(x){return p.indexOf(x)<0});return MUC[k]={p:p,s:s2}}
 /* compose full svg body for a frame */
 function scene3(E,vn,u,opt){opt=opt||{};var K=E.k,p=K.length>1?lpP(K[0],K[1],u):K[0],L=(typeof LIB!="undefined"&&LIB[E.id])||[],
- o={mus:opt.nomus?"":MG3[E.mg||L[1]]||"",hold:E.hold,g:E.g,cable:E.cable,cable2:E.cable2,pn:E.pn},R=draw3(E,p,vn,o),PR=R.PR.concat(eq3(E,vn));
+ o={mus:opt.nomus?"":musOf(E.id,E.mg||L[1]),hold:E.hold,g:E.g,cable:E.cable,cable2:E.cable2,pn:E.pn},R=draw3(E,p,vn,o),PR=R.PR.concat(eq3(E,vn));
 if(opt.ghost&&K.length>1){var G=draw3(E,K[0],vn,{ghost:1});G.PR.forEach(function(q){PR.push([q[0]-1e3,q[1]])})}
 PR.sort(function(a,b){return a[0]-b[0]});var s="";
 var bb=box3(E,vn);if(vn!="top"&&!E.nofloor)s+='<line class="fl" x1="'+rf(bb.x0)+'" y1="0" x2="'+rf(bb.x1)+'" y2="0"/><ellipse class="sd" cx="'+rf(bb.cx)+'" cy="0" rx="'+rf(bb.sw)+'" ry="3"/>';
@@ -1108,7 +1164,7 @@ function pics3d(k){var E=P3[k];E.id=k;var v=PV3V[k]||E.v||"side",two=E.k.length>
 var tabs='<div class="pv-vw" role="tablist">'+["side","front","top"].map(function(x){return'<button type="button" role="tab" aria-selected="'+(x==v)+'"'+(x==v?' class="on"':'')+' onclick="pvView(this,\''+x+'\',event)">'+PV3N[x]+'</button>'}).join("")+'</div>';
 var st='<div class="pv-st'+(two?' pv-an':'')+'" data-k="'+k+'" data-v="'+v+'"'+(two?' onclick="pvTog(this,event)"':'')+'><svg viewBox="'+pv3vb(E,v)+'" aria-hidden="true"><g>'+scene3(E,v,0)+'</g></svg>'+(two?'<span class="pv-tg"><i></i>В движении</span><span class="pv-pp" aria-hidden="true"></span>':'')+'</div>';
 var th=two?'<div class="pv-th">'+pv3th(E,v)+'</div>':'';
-return'<div class="pv pv3">'+tabs+st+th+(MG3[(LIB[k]||[])[1]]?'<div class="pv-lg"><i></i>Цветом — мышцы, которые работают</div>':'')+'</div>'}
+return'<div class="pv pv3">'+tabs+st+th+(function(){var q=typeof MX!="undefined"&&MX[k];if(!q)return"";return'<div class="pvm"><span><i class="m1"></i><b>Работают:</b> '+esc(q.mp)+'</span>'+(q.ms?'<span><i class="m2"></i><b>Помогают:</b> '+esc(q.ms)+'</span>':'')+'</div>'})()+'</div>'}
 function pv3th(E,v){var vb=pv3vb(E,v),cp=E.cap||["Старт","Финиш"];return'<figure onclick="pvSeek(this,0)"><svg viewBox="'+vb+'" aria-hidden="true">'+scene3(E,v,0)+'</svg><figcaption>'+cp[0]+'</figcaption></figure><figure onclick="pvSeek(this,1)"><svg viewBox="'+vb+'" aria-hidden="true">'+scene3(E,v,1,{ghost:1,arrow:1})+'</svg><figcaption>'+cp[1]+'</figcaption></figure>'}
 function pvView(b,v,ev){if(ev)ev.stopPropagation();var pv=b.closest(".pv"),st=pv.querySelector(".pv-st"),k=st.dataset.k,E=P3[k];
 pv.querySelectorAll(".pv-vw button").forEach(function(x){var on=x==b;x.classList.toggle("on",on);x.setAttribute("aria-selected",on)});
@@ -2248,7 +2304,7 @@ return'<div class="phd"><button class="bk" onclick="go(DI(\'Ещё\'))">'+ic("ch
 /* hub */
 function hubRow(t,i){return'<button class="mt" style="animation-delay:'+(i*20)+'ms" onclick="go(DI(\''+t[1]+'\'))"><span class="mi">'+ic(t[2],22)+'</span><b>'+t[0]+'</b><small>'+t[3]+'</small></button>'}
 more=function(){var tp="";try{tp=localStorage.getItem("wktpl")||"mine"}catch(e){}
-var tn=tp=="shared"?"Присланная":(TPL.filter(function(t){return t.id==tp})[0]||{n:"Своя"}).n,n=wa[dk()]||0,s=sl[iso()],fs=typeof fdSum=="function"?fdSum():{k:0},cm=0,c=calGet(),mo=iso().slice(0,7);for(var k in c)if(k.slice(0,7)==mo)cm++;
+var tn=(typeof PGN!="undefined"&&PGN)?PGN:tp=="shared"?"Присланная":(TPL.filter(function(t){return t.id==tp})[0]||{n:"Своя"}).n,n=wa[dk()]||0,s=sl[iso()],fs=typeof fdSum=="function"?fdSum():{k:0},cm=0,c=calGet(),mo=iso().slice(0,7);for(var k in c)if(k.slice(0,7)==mo)cm++;
 var SEC=[["Тренировки",[["Разминка","Разминка","flame","Всё тело, 6–12 минут с таймером"],["Программы","Программы","layers","Сейчас: "+tn],["Редактор","Редактор","edit","Упражнения, порядок, суперсеты"],["Упражнения","Упражнения","book",Object.keys(LIB).length+" упражнений с техникой"]]]];
 if(!UI.simple){SEC.push(["История и прогресс",[["История","Журнал","hist","Журнал, календарь, итоги недели"],["Прогресс","Графики","trend","Сила, замеры, фото, мышцы, награды"]]],
 ["Питание и восстановление",[["Питание","Питание","food",fs.k?fs.k+" ккал сегодня":"Дневник и список покупок"],["Восстановление","Восстановление","moon","Вода "+f1(n*.25)+" л · сон "+(s&&s[0]?f1(s[0])+" ч":"—")],["Набор / Сушка","Набор/Сушка","target",PHN[ph.p]+" · неделя "+phw()]]],
@@ -2425,6 +2481,45 @@ var showOld4=show;
 show=function(){var d=D[cur];if(d&&d[0]=="Спросить"){aindex();document.getElementById("view").innerHTML=pheadOld("Спросить")+atab();return}showOld4.apply(this,arguments)};
 var moreOld4=more;
 more=function(){var h=moreOld4();return h.replace('<h2 class="pgt">Ещё</h2>','<h2 class="pgt">Ещё</h2><button class="aqb" onclick="AQ.q=\'\';go(DI(\'Спросить\'))"><span class="aqbi">'+ic("search",18)+'</span><span class="aqbt"><b>Задай вопрос</b><small>Питание, тренировки, восстановление — ответ сразу</small></span>'+ic("chevR",16)+'</button>')};
+/* ===== programs page redesign + rename ===== */
+var PGN="";try{PGN=localStorage.getItem("wkpgname")||""}catch(e){}
+var phNameOld=phName;phName=function(){return PGN||phNameOld()};
+function pgSetName(n){PGN=n;try{if(n)localStorage.setItem("wkpgname",n);else localStorage.removeItem("wkpgname")}catch(e){}}
+(function(){var tl=tplLoad;tplLoad=function(id){pgSetName("");tl(id)};var sa=spAccept;spAccept=function(){if(SPI)pgSetName("");sa()};var pl=phLoad;phLoad=function(i){var p=PGH[i];pl(i);if(p)pgSetName(p.n);show()}})();
+var PREN=-2,KDN={s:"тяжёлый",l:"лёгкий",e:"лёгкий",r:"отдых"};
+function pgWeek(dd){return'<div class="pwk">'+dd.map(function(d,i){return'<span class="pwd k'+d[1]+'" title="'+esc(D[i][0]+" · "+d[0])+'"><i>'+D[i][0]+'</i><b></b></span>'}).join("")+'</div>'}
+function pgStat(dd){var t=dd.filter(function(d){return d[1]=="s"||d[1]=="l"||d[1]=="e"}).filter(function(d){return d[2].filter(function(z){var g=(LIB[z[0]]||[])[1];return g&&g!="Кардио"&&g!="Мобильность"}).length>=3}).length,
+ n=dd.reduce(function(a,d){return a+d[2].filter(function(z){return z[0]!="warm"&&z[0]!="stretch"}).length},0);return t+" трен. в неделю · "+n+" упражнений"}
+function pgList(dd){return'<div class="pprev">'+dd.map(function(d,k){return'<div class="ppd"><b><span class="pdt k'+d[1]+'">'+D[k][0]+'</span>'+esc(d[0])+'<em>'+KDN[d[1]]+'</em></b><span>'+d[2].filter(function(z){return z[0]!="warm"&&z[0]!="stretch"}).map(function(z){return exname(z[0])+' '+z[1]}).join(" · ")+'</span></div>'}).join("")+'</div>'}
+function pgRen(i){var el=document.getElementById("pgr"),n=(el&&el.value||"").trim().slice(0,40);if(!n){PREN=-2;show();return}
+ if(i==-1){pgSetName(n);var js=JSON.stringify(phCur());PGH.forEach(function(p){if(JSON.stringify(p.dd)==js)p.n=n})}else{PGH[i].n=n;if(JSON.stringify(PGH[i].dd)==JSON.stringify(phCur()))pgSetName(n)}
+ phSave();PREN=-2;show();toast("Название сохранено")}
+function pgTitle(i,name){if(PREN==i)return'<div class="pren"><input class="inp" id="pgr" value="'+esc(name)+'" maxlength="40" aria-label="Название программы" onkeydown="if(event.key==\'Enter\')pgRen('+i+')"><button class="tab" style="--c:var(--l)" aria-selected="true" onclick="pgRen('+i+')">Готово</button></div>';
+ return'<div class="ptl"><b>'+esc(name)+'</b><button class="pic2" aria-label="Переименовать" onclick="PREN='+i+';show();setTimeout(function(){var e=document.getElementById(\'pgr\');if(e){e.focus();e.select()}},30)">'+ic("edit",15)+'</button></div>'}
+phHTML=function(){var cur=phCur(),cj=JSON.stringify(cur),st=pgSt(),h='';
+h+='<div class="pcard2 cur"><div class="pc2h"><span class="pc2i">'+ic("layers",20)+'</span><div class="pc2t"><span class="pc2e">Сейчас в работе</span>'+pgTitle(-1,phName())+'<small>'+pgStat(cur)+(st?' · с '+phDate(st):'')+'</small></div></div>'+pgWeek(cur)+
+ (PHop=="c"?pgList(cur):'')+'<div class="pc2b"><button class="tab" onclick="PHop=PHop==\'c\'?-9:\'c\';show()">'+(PHop=="c"?'Скрыть':'Упражнения')+'</button><button class="tab" onclick="phAdd()">'+ic("plus",15)+' Сохранить</button></div></div>';
+var L=PGH.map(function(p,i){return[p,i]}).filter(function(x){return JSON.stringify(x[0].dd)!=cj});
+h+='<div class="psec"><h3>Мои программы</h3><span>'+L.length+'</span></div>';
+if(!L.length)h+='<p class="note">Пока пусто. Когда загрузишь новую программу, текущая сохранится сюда сама — к ней можно будет вернуться.</p>';
+L.forEach(function(x,j){var p=x[0],i=x[1],op=PHop==i;
+ h+='<div class="pcard2" style="animation-delay:'+(Math.min(j,8)*35)+'ms"><div class="pc2h"><div class="pc2t">'+pgTitle(i,p.n)+'<small>'+phWhen(p,false)+' · '+pgStat(p.dd)+'</small></div></div>'+pgWeek(p.dd)+(op?pgList(p.dd):'')+
+ '<div class="pc2b"><button class="tab" onclick="PHop=PHop=='+i+'?-9:'+i+';PHdel=-1;show()">'+(op?'Скрыть':'Упражнения')+'</button><button class="tab" style="--c:var(--s)" aria-selected="true" onclick="phLoad('+i+')">'+ic("download",15)+' Загрузить</button><span class="sp"></span><button class="pic2'+(PHdel==i?' warn':'')+'" aria-label="Удалить" onclick="phDel('+i+')">'+(PHdel==i?'Удалить?':ic("trash",15))+'</button></div></div>'});
+return h+'<div class="psec"><h3>Готовые программы</h3><span>'+TPL.length+'</span></div>'};
+phAdd=function(){var n=phName();if(phSnap(n,true)){toast("Копия сохранена: "+n);show()}};
+prgtab=function(){var curT="";try{curT=localStorage.getItem("wktpl")||"mine"}catch(e){}var h=phHTML(),grp=[["Для мужчин и всех",TPL.filter(function(t){return!t.f})],["Для девушек",TPL.filter(function(t){return t.f})]];
+grp.forEach(function(G){if(!G[1].length)return;h+='<div class="lgh" style="margin-top:6px">'+G[0]+'</div>';
+ G[1].forEach(function(t,ti){var dd=tplDays(t),op=TO==t.id;
+ h+='<div class="pcard2" style="animation-delay:'+(ti*35)+'ms"><div class="pc2h"><div class="pc2t"><div class="ptl"><b>'+esc(t.n)+'</b></div><small>'+pgStat(dd)+'</small></div></div><p class="pc2d">'+esc(t.d)+'</p>'+pgWeek(dd)+(op?pgList(dd):'')+
+ '<div class="pc2b"><button class="tab" onclick="TO=TO==\''+t.id+'\'?\'\':\''+t.id+'\';show()">'+(op?'Скрыть':'Упражнения')+'</button><button class="tab" style="--c:var(--s)" aria-selected="true" onclick="tplLoad(\''+t.id+'\')">'+ic("download",15)+' Загрузить</button></div></div>'})});
+return h};
+/* ===== hint: tap exercise name to see technique ===== */
+var EXH=0;try{EXH=+localStorage.getItem("wkexh")||0}catch(e){}
+document.addEventListener("click",function(e){var t=e.target.closest&&e.target.closest(".ex .nm");if(t&&!EXH){EXH=1;try{localStorage.setItem("wkexh","1")}catch(x){}var b=document.getElementById("exh");if(b){b.classList.add("out");setTimeout(function(){b.remove()},250)}}},true);
+var show0Old=show0;
+show0=function(){show0Old.apply(this,arguments);if(EXH)return;var v=document.getElementById("view"),f=v&&v.querySelector(".ex");if(!f||document.getElementById("exh"))return;
+ f.insertAdjacentHTML("beforebegin",'<div class="exh" id="exh"><span class="exhi">'+ic("book",16)+'</span><span>Нажми на название упражнения — откроются техника, картинка движения и подсказки</span><button aria-label="Понятно" onclick="EXH=1;try{localStorage.setItem(\'wkexh\',\'1\')}catch(e){}this.parentNode.remove()">'+ic("x",14)+'</button></div>')};
+
 
 
 
