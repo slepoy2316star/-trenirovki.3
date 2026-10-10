@@ -2168,20 +2168,26 @@ PGH.sort(function(a,b){return b.t-a.t});if(PGH.length>30)PGH.length=30;phSave();
 function phSave(){try{localStorage.setItem("wkpgh",JSON.stringify(PGH))}catch(e){}}
 function phCur(){return D.slice(0,7).map(function(d){return[d[1],d[2],d[3].map(function(e){return[e[0],e[2],e[3]?1:0]})]})}
 function phName(){var t="";try{t=localStorage.getItem("wktpl")||"mine"}catch(e){}var x=TPL.filter(function(q){return q.id==t})[0];return x?x.n:t=="shared"?"Программа по ссылке":"Своя программа"}
+function pgSt(){var t=0;try{t=+localStorage.getItem("wkpgst")||0}catch(e){}if(!t){try{var c=Object.keys(calGet()).sort()[0];if(c)t=new Date(c+"T12:00:00").getTime()}catch(e){}}return t}
+function pgStSet(){try{localStorage.setItem("wkpgst",Date.now())}catch(e){}}
 function phSnap(n,force){var dd=phCur(),js=JSON.stringify(dd);if(!force&&PGH.some(function(p){return JSON.stringify(p.dd)==js}))return false;
-PGH.unshift({n:n||phName(),t:Date.now(),dd:dd});if(PGH.length>30)PGH.length=30;phSave();return true}
-(function(){var tl=tplLoad;tplLoad=function(id){phSnap();tl(id)};var sa=spAccept;spAccept=function(){if(SPI)phSnap();sa()}})();
-function phLoad(i){var p=PGH[i];if(!p)return;phSnap();loadDays(p.dd);try{localStorage.setItem("wktpl","mine")}catch(e){}PHop=-1;toast("Программа восстановлена: "+p.n);go(TD)}
+PGH.unshift({n:n||phName(),t:Date.now(),dd:dd,k:force?"m":"a",f:force?0:pgSt()});if(PGH.length>30)PGH.length=30;phSave();return true}
+(function(){var tl=tplLoad;tplLoad=function(id){phSnap();tl(id);pgStSet()};var sa=spAccept;spAccept=function(){var had=!!SPI;if(had)phSnap();sa();if(had)pgStSet()}})();
+function phLoad(i){var p=PGH[i];if(!p)return;phSnap();loadDays(p.dd);pgStSet();try{localStorage.setItem("wktpl","mine")}catch(e){}PHop=-1;toast("Программа восстановлена: "+p.n);go(TD)}
 function phDel(i){if(PHdel!=i){PHdel=i;show();return}PGH.splice(i,1);PHdel=-1;PHop=-1;phSave();show();toast("Удалено")}
 function phAdd(){var el=document.getElementById("phn"),n=(el&&el.value||"").trim()||phName();if(phSnap(n,true)){toast("Сохранено: "+n);show()}}
 function phRen(i){var el=document.getElementById("phr"+i);if(!el)return;var n=el.value.trim();if(n){PGH[i].n=n;phSave();toast("Переименовано")}}
-function phDate(t){var d=new Date(t);return p2(d.getDate())+"."+p2(d.getMonth()+1)+"."+String(d.getFullYear()).slice(2)+" "+p2(d.getHours())+":"+p2(d.getMinutes())}
+function phDate(t){var d=new Date(t);return p2(d.getDate())+"."+p2(d.getMonth()+1)+"."+d.getFullYear()}
+var PHSEED={"Исходная программа":1,"Исходная + широчайшие":1,"Мышцы + калистеника":1,"Мышцы + калистеника, больше ног":1,"То же, гиперэкстензия вместо моста":1,"Зальная: мышцы + выносливость":1};
+function phWhen(p,same){if(same){var s=pgSt();return s?"Используется с "+phDate(s):"Используется сейчас"}
+if(p.k=="m")return"Сохранена вручную "+phDate(p.t);if(!p.k&&PHSEED[p.n])return"Составлена "+phDate(p.t);
+return p.f&&phDate(p.f)!=phDate(p.t)?"Использовалась "+phDate(p.f)+" — "+phDate(p.t):"Заменена "+phDate(p.t)}
 function phHTML(){var cur=JSON.stringify(phCur());
 var h='<h3 class="th">Мои программы</h3><p class="note">Здесь хранятся твои прошлые программы. Перед каждой загрузкой новой программы текущая сохраняется сюда автоматически. Восстановить можно в одно касание — веса совпадающих упражнений сохранятся.</p>';
 h+='<div class="fadd" style="border:1px solid var(--line);border-radius:14px;margin-bottom:10px;flex-direction:column;align-items:stretch"><input class="inp" id="phn" placeholder="Название, например «Набор — осень»" maxlength="40"><button class="tab" style="--c:var(--l)" aria-selected="true" onclick="phAdd()">Сохранить текущую</button></div>';
 if(!PGH.length)h+='<p class="note" style="text-align:center">Пока пусто. Сохрани текущую программу или загрузи новую — старая появится здесь.</p>';
 PGH.forEach(function(p,i){var same=JSON.stringify(p.dd)==cur,op=PHop==i,nx=p.dd.reduce(function(a,d){return a+d[2].filter(function(z){return z[0]!="warm"&&z[0]!="stretch"}).length},0);
-h+='<div class="pcard'+(same?' on':'')+'" style="animation-delay:'+(Math.min(i,8)*35)+'ms"><div class="pch"><div><b>'+esc(p.n)+'</b>'+(same?'<span class="pon">'+ic("check",13)+' сейчас</span>':'')+'<small>Сохранено '+phDate(p.t)+' · упражнений: '+nx+'</small></div></div>';
+h+='<div class="pcard'+(same?' on':'')+'" style="animation-delay:'+(Math.min(i,8)*35)+'ms"><div class="pch"><div><b>'+esc(p.n)+'</b>'+(same?'<span class="pon">'+ic("check",13)+' сейчас</span>':'')+'<small>'+phWhen(p,same)+' · упражнений: '+nx+'</small></div></div>';
 h+='<div class="pdays">'+p.dd.map(function(d,k){return'<span class="pd k'+d[1]+'"><i>'+D[k][0]+'</i>'+esc(d[0])+'</span>'}).join("")+'</div>';
 if(op)h+='<div class="pprev">'+p.dd.map(function(d,k){return'<div class="ppd"><b>'+D[k][0]+' · '+esc(d[0])+'</b><span>'+d[2].filter(function(z){return z[0]!="warm"&&z[0]!="stretch"}).map(function(z){return exname(z[0])+' '+z[1]}).join(" · ")+'</span></div>'}).join("")+
  '<div class="fadd" style="border:1px solid var(--line);border-radius:12px;margin-top:8px"><input class="inp" id="phr'+i+'" value="'+esc(p.n)+'" maxlength="40" aria-label="Название"><button class="tab" onclick="phRen('+i+');show()">Переименовать</button></div></div>';
